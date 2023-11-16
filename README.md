@@ -1,70 +1,132 @@
-# Getting Started with Create React App
+# COPAMEBA 🛋️
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Plateforme de vente de meubles de seconde main
 
-## Available Scripts
+Bienvenue dans notre repository COPAMEBA, un site de vente en ligne de meubles de seconde main, développé dans le cadre d'un projet collectif d'école à Ada Tech School.
 
-In the project directory, you can run:
+### Introduction
 
-### `npm start`
+COPAMEBA a été conçu et réalisé en deux semaines avec un travail réparti entre 8 apprenant.es (2 équipes de 4, une sur le back-end et l'autre sur le front-end). Ces 2 équipes ont alterné entre les deux stacks à la fin de la première semaine. Le contexte imposé était de répondre aux besoins d'une cliente nommée Lauréline Fleury, qui souhaitait un site web interactif permettant aux utilisateurs de vendre leurs meubles, tout en offrant à la cliente une page d'administration pour gérer le stock des produits.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Maquette
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Avant de commencer le développement, nous avons élaboré une maquette sous forme de wireframe, réalisée sur Miro.
 
-### `npm test`
+![](my-app\src\assets\images\maquette1.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![](my-app\src\assets\images\maquette2.png)
 
-### `npm run build`
+![](my-app\src\assets\images\maquette3.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![](my-app\src\assets\images\maquette4.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![](my-app\src\assets\images\maquette5.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![](my-app\src\assets\images\maquette6.png)
 
-### `npm run eject`
+### Organisation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Pour la gestion des tâches nous avons utilisé Trello.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![](my-app\src\assets\images\trello.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Back-end & BDD
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+L'équipe de développement back-end a travaillé avec Node.js et Express pour créer une base solide et sécurisée. Nous avons également utilisé SQLite comme système de gestion de base de données pour stocker les informations sur les meubles, leurs catégories et les utilisateurs.
 
-## Learn More
+Technologies utilisées :
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Node.js
+- Express
+- SQLite
+- Axios (pour les requêtes)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Et les tables SQLite sont les suivantes :
 
-### Code Splitting
+- user
+- product
+- product_category
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![](my-app\src\assets\images\table1.png)
 
-### Analyzing the Bundle Size
+![](my-app\src\assets\images\table2.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![](my-app\src\assets\images\table3.png)
 
-### Making a Progressive Web App
+Voir ce que retournent en méthode GET (avec Insomnia ou Postman) les endpoints suivant :
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- http://localhost:8080/products
+- http://localhost:8080/products_category
 
-### Advanced Configuration
+Une fois le repository cloné en local, penser à initialiser le fichier `package.json` et à installer les dépendances avec :
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```
+npm init -y
+npm install // ou npm i
+```
 
-### Deployment
+Les commandes pour lancer le serveur depuis le dossier my-app :
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```
+cd my-app
+npm run start-dev
+```
 
-### `npm run build` fails to minify
+### Front-end
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+L'équipe front-end a pris en charge l'interface utilisateur en utilisant React.js et Bootstrap.
+
+Technologies utilisées :
+
+- React.js
+- Bootstrap
+
+Les commandes pour démarrer l'application depuis le dossier my-app :
+
+```
+cd my-app
+npm run start
+```
+
+Voici un aperçu des différentes pages :
+
+![](my-app\src\assets\images\site1.png)
+
+![](my-app\src\assets\images\site2.png)
+
+![](my-app\src\assets\images\site3.png)
+
+![](my-app\src\assets\images\site4.png)
+
+![](my-app\src\assets\images\site5.png)
+
+![](my-app\src\assets\images\site6.png)
+
+### Ce qui pourrait être amélioré :
+
+Voici quelques fonctionnalités qui seraient utiles à ajouter :
+
+- La possibilité de partager des événements.
+- L'ajout d'un calendrier pour visualiser tous les événements créés par les personnes suivies par le compte de Lauréline, facilitant ainsi le suivi de ces événements.
+
+### Conclusion
+
+COPAMEBA est le fruit de l'effort collaboratif de notre équipe, qui a réussi à réaliser un projet complexe en seulement deux semaines. Nous sommes fiers de ce premier résultat.
+
+### Équipe COPAMEBA :
+
+**Equipe back-end (1ère semaine) :**
+
+- Oriane
+- Alexandre
+- Bradley
+- Alexis
+
+**Equipe front-end (1ère semaine):**
+
+- Clémentine
+- Marie
+- Eline
+- Pierre
+
+Merci de visiter notre repository ! 😃
